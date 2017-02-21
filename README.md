@@ -1,6 +1,6 @@
 # <img src="https://github.com/pip-tasks/pip-tasks-ps/raw/master/artifacts/logo.png" alt="Pip.Devs Logo" style="max-width:30%"> <br/> Java build tasks for Pip.Tasks
 
-This Powershell module brings tasks for Pip.Tasks to build Java components
+This Powershell module contains tasks for [Pip.Tasks](https://github.com/pip-tasks/pip-tasks-ps) to build Java components
 
 ### Maven package management, built and test tasks
 
