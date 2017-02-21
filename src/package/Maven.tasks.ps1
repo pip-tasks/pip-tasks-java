@@ -31,14 +31,9 @@ task MavenGetDep {
     Get-MavenDependencies -Path .
 }
 
-# Synopsis: Clears Maven dependencies
-task MavenCleanDep {
-    Clear-MavenDependencies -Path .
-}
-
-# Synopsis: Restore Maven dependencies
-task MavenRestoreDep {
-    Restore-MavenDependencies -Path .
+# Synopsis: Install Maven dependencies
+task MavenInstallDep {
+    Install-MavenDependencies -Path .
 }
 
 # Synopsis: Update Maven dependency
@@ -47,4 +42,9 @@ task MavenUpdateDep {
     assert ($Version -ne $null -or $Dependency.Contains('@')) "Version is not set"
 
     Update-MavenDependency -Path . -Dependency $Dependency -Version $Version
+}
+
+# Synopsis: Clears Maven dependencies
+task MavenCleanDep {
+    Clear-MavenDependencies -Path .
 }

@@ -17,5 +17,5 @@ Register-DeclarativeTask -Task GetVersion -Variable Package -Value maven -CallFi
 Register-DeclarativeTask -Task SetVersion -Variable Package -Value maven -CallFile $mvntasks -CallTask MavenSetVersion -Component
 Register-DeclarativeTask -Task GetDep -Variable Package -Value maven -CallFile $mvntasks -CallTask MavenGetDep -Component
 Register-DeclarativeTask -Task CleanDep -Variable Package -Value maven -CallFile $mvntasks -CallTask MavenCleanDep -Component
-Register-DeclarativeTask -Task RestoreDep -Variable Package -Value maven -CallFile $mvntasks -CallTask MavenRestoreDep -Component
+Register-DeclarativeTask -Task InstallDep -Variable Package -Value maven -CallFile $mvntasks -CallTask MavenInstallDep -Component
 Register-DeclarativeTask -Task UpdateDep -Variable Package -Value maven -CallFile $mvntasks -CallTask MavenUpdateDep -Component

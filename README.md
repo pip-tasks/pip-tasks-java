@@ -11,11 +11,11 @@ Maven tasks:
 * **SetVersion** - sets version of Maven project
   - **Version** - version parameter
 * **GetDep** - gets Maven dependencies
-* **CleanDep** - cleans Maven dependencies
-* **RestoreDep** - downloads Maven dependencies 
+* **InstallDep** - downloads Maven dependencies 
 * **UpdateDep** - updates Maven dependency to specified version
   - **Dependency** - dependency name parameter
   - **Version** - dependency version parameter
+* **CleanDep** - cleans Maven dependencies
 * **Clean** - cleans Maven project (mvn clean)
 * **Build** - builds Maven project (mvn build)
 * **Rebuild** - rebuilds Maven project (mvn clean; mvn build)
@@ -69,7 +69,7 @@ A typical scenario to work with this component may include the following steps:
 
 * Install Maven dependencies
 ```powershell
-> Invoke-Task -Task RestoreDep -Component component1
+> Invoke-Task -Task InstallDep -Component component1
 ```
 
 * Compile component with Maven (Java)

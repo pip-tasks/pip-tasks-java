@@ -220,7 +220,7 @@ PS> Clear-MavenDependencies -Path .
     end {}
 }
 
-function Restore-MavenDependencies
+function Install-MavenDependencies
 {
 <#
 .SYNOPSIS
@@ -229,7 +229,7 @@ Installs Maven dependencies
 
 .DESCRIPTION
 
-Restore-MavenDependencies installs Maven dependencies
+Install-MavenDependencies installs Maven dependencies
 
 .PARAMETER Path
 
@@ -237,7 +237,7 @@ Path to Maven project (default: .)
 
 .EXAMPLE
 
-PS> Restore-MavenDependencies -Path .
+PS> Install-MavenDependencies -Path .
 
 #>
     [CmdletBinding()]
