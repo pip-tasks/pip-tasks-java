@@ -303,7 +303,7 @@ PS> Update-MavenDependency -Path . -Dependency pip-services-commons -Version 1.0
         if ($Dependency -eq $null -or $Dependency -eq '') { return }
         if ($Dependency.Contains('@'))
         {
-            $pos = $Dependency.IndexOf('@')
+            $pos = $Dependency.LastIndexOf('@')
             $Dependency = $Dependency.Substring(0, $pos)
             $Version = $Dependency.Substring($pos + 1)
         }
