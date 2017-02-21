@@ -3,13 +3,16 @@
 This Powershell module brings tasks for Pip.Tasks to build Java components
 
 **Maven** tasks turned on by property **$Package = 'maven'**, **$Build = 'maven'** and **$Test = 'maven'**
-* **CleanDep** - cleans packages with Maven dependencies
-* **RestoreDep** - downloads Maven packages references by projects 
-* **UpdateDep** - updates selected package or all packages from specified source to the latest compatible version
-* **Clean** - cleans projects with Maven (mvn clean)
-* **Build** - builds projects  with Gulp (mvn build)
-* **Rebuild** - rebuilds projects with Maven (mvn clean; mvn build)
-* **Test** - runs tests with Maven (mvn test)
+* **GetVersion** - gets version of Maven project
+* **SetVersion** - sets version of Maven project
+* **GetDep** - gets Maven dependencies
+* **CleanDep** - cleans Maven dependencies
+* **RestoreDep** - downloads Maven dependencies 
+* **UpdateDep** - updates Maven dependency to specified version
+* **Clean** - cleans Maven project (mvn clean)
+* **Build** - builds Maven project (mvn build)
+* **Rebuild** - rebuilds Maven project (mvn clean; mvn build)
+* **Test** - runs tests from Maven project (mvn test)
 
 ## Installation
 

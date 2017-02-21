@@ -44,7 +44,7 @@ task MavenRestoreDep {
 # Synopsis: Update Maven dependency
 task MavenUpdateDep {
     assert ($Dependency -ne $null) "Dependency is not set"
-    assert ($Version -ne $null) "Version is not set"
+    assert ($Version -ne $null -or $Dependency.Contains('@')) "Version is not set"
 
     Update-MavenDependency -Path . -Dependency $Dependency -Version $Version
 }
