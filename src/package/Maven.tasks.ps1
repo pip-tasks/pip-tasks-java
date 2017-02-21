@@ -14,17 +14,37 @@ task MavenInstall {
     Install-Maven -Path .
 }
 
-# Synopsis: Clears nuget dependencies
+# Synopsis: Gets version of Maven project
+task MavenGetVersion {
+    Get-MavenVersion -Path .
+}
+
+# Synopsis: Sets version of Maven project
+task MavenSetVersion {
+    assert ($Version -ne $null) "Version is not set"
+
+    Set-MavenVersion -Path . -Version $Version
+}
+
+# Synopsis: Gets Maven dependencies
+task MavenGetDep {
+    Get-MavenDependencies -Path .
+}
+
+# Synopsis: Clears Maven dependencies
 task MavenCleanDep {
     Clear-MavenDependencies -Path .
 }
 
-# Synopsis: Restore nuget dependencies
+# Synopsis: Restore Maven dependencies
 task MavenRestoreDep {
     Restore-MavenDependencies -Path .
 }
 
-# Synopsis: Update nuget dependency
+# Synopsis: Update Maven dependency
 task MavenUpdateDep {
+    assert ($Dependency -ne $null) "Dependency is not set"
+    assert ($Version -ne $null) "Version is not set"
+
     Update-MavenDependency -Path . -Dependency $Dependency -Version $Version
 }
