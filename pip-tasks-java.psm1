@@ -1,6 +1,6 @@
 ########################################################
 ##
-## pip-tasks-java-ps.psm1
+## pip-tasks-java.psm1
 ## Pip.Tasks.Java - Java build tasks for Pip.Tasks
 ## Startup module
 ##
